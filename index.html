@@ -33,8 +33,7 @@
     <section id="demo">
         <h2>Try It Now</h2>
         <form id="analyzeForm">
-            <label for
-="inci">INCI Ingredients (comma-separated or list):</label>
+            <label for="inci">INCI Ingredients (comma-separated or list):</label>
             <input type="text" id="inci" placeholder="e.g., Aqua, Glycerin, Parfum" required style="width: 100%; box-sizing: border-box;">
             <button type="submit">Analyze</button>
         </form>
@@ -43,7 +42,7 @@
 
     <section id="pricing">
         <h2>Pricing</h2>
-<p>Pay-per-call model for scalable AI integrations.</p>
+        <p>Pay-per-call model for scalable AI integrations.</p>
         <div class="pricing">
             <div class="plan">
                 <h3>Starter</h3>
@@ -55,7 +54,8 @@
             </div>
             <div class="plan">
                 <h3>Enterprise</h3>
-                <p>$299 / 100k calls</p>
+                <p>$299 / 100k calls</
+p>
             </div>
         </div>
         <p style="text-align: center; margin-top: 20px;">
@@ -75,7 +75,7 @@ import requests
 def analyze_ingredients(inci: str) -> str:
     response = requests.post(
         "https://web-production-9cdb4.up.railway.app/v1/analyze",
-        headers={"X-API-Key": "cire-5L05UU5AtvoFNRF4WXA_O2NFMAukDrDO", "Content-Type": "application/json"},
+        headers={"X-API-Key": "cire-v2-UliPzKbhKMtudgLBCxsNMJCHTHtHKpzO", "Content-Type": "application/json"},
         json={"inci": inci}
     )
     return response.json()</code></pre>
@@ -100,7 +100,7 @@ message = client.messages.create(
 const response = await fetch('https://web-production-9cdb4.up.railway.app/v1/analyze', {
   method: 'POST',
   headers: {
-    'X-API-Key': 'cire-5L05UU5AtvoFNRF4WXA_O2NFMAukDrDO',
+    'X-API-Key': 'cire-v2-UliPzKbhKMtudgLBCxsNMJCHTHtHKpzO',
     'Content-Type': 'application/json'
   },
   body: JSON.stringify({ inci: 'Aqua, Glycerin' })
@@ -125,8 +125,9 @@ const data = await response.json();</code></pre>
             try {
                 const response = await fetch('https://web-production-9cdb4.up.railway.app/v1/analyze', {
                     method: 'POST',
+                    mode: 'cors',
                     headers: {
-                        'X-API-Key': 'cire-5L05UU5AtvoFNRF4WXA_O2NFMAukDrDO',
+                        'X-API-Key': 'cire-v2-UliPzKbhKMtudgLBCxsNMJCHTHtHKpzO',
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({ inci })
