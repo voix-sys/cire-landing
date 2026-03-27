@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIRE — Fast Cosmetic Risk Engine</title>
-    <meta name="description" content="CIRE: deterministic cosmetic INCI risk scoring API for AI agents. Analyze irritation, allergen, pregnancy, acne, and interactions.">
+    <title>CIRE API — Cosmetic INCI Risk Scoring for AI Agents & Beauty Compliance</title>
+    <meta name="description" content="CIRE: deterministic K-beauty INCI ingredient API for AI agents. Real-time cosmetic safety scoring: irritation, allergen, pregnancy, acne risks & interactions. For shopping agents, beauty compliance, ingredient checkers.">
+    <meta name="keywords" content="INCI API, cosmetic risk scoring, ingredient safety, K-beauty compliance, AI agent tools, beauty formulation API">
     <link rel="canonical" href="https://cire-landing.vercel.app/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CIRE API",
+      "description": "Deterministic INCI cosmetic ingredient risk scoring for AI agents",
+      "applicationCategory": "Utility",
+      "url": "https://cire-landing.vercel.app/",
+      "offers": {
+        "@type": "Offer",
+        "price": "9",
+        "priceCurrency": "USD"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "CIRE",
+        "url": "https://cire-landing.vercel.app/"
+      }
+    }
+    </script>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
         header { text-align: center; padding: 40px 0; border-bottom: 1px solid #eee; }
@@ -29,17 +50,17 @@
 </head>
 <body>
     <header>
-        <h1>Ship safer cosmetic AI in 10 minutes — with CIRE API</h1>
-        <p class="tagline">Deterministic INCI risk scoring (irritation/allergen/pregnancy/acne/interactions) + free key in 60s</p>
+        <h1>Cosmetic INCI Risk Scoring API — Real-time Safety Checks for AI Agents</h1>
+        <p class="tagline">Deterministic ingredient analysis: irritation, allergen, pregnancy, acne, interactions. K-beauty compliance ready.</p>
         <p style="margin-top:14px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
-            <a href="#register" style="background:#28a745; color:#fff; padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:600;">Get Free API Key</a>
-            <a href="#demo" style="background:#0d6efd; color:#fff; padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:600;">Run Demo Call</a>
+            <a href="#register" style="background:#28a745; color:#fff; padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:700;">Get Free API Key + 100 Credits</a>
+            <a href="#demo" style="background:#0d6efd; color:#fff; padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:600;">Run Live Demo</a>
         </p>
-        <p style="font-size:0.92em; color:#666; margin-top:8px;">No card required · 100 free credits · Works with LangChain/Claude/MCP</p>
+        <p style="font-size:0.92em; color:#666; margin-top:8px;">No card required · key issued in ~60s · Works with LangChain/Claude/MCP</p>
     </header>
 
     <section id="demo">
-        <h2>Try It Now</h2>
+        <h2>Live INCI Risk Analyzer — Try It Free</h2>
         <form id="analyzeForm">
             <label for="apiKey">Your API Key</label>
             <input type="text" id="apiKey" placeholder="cire-..." style="width: 100%; box-sizing: border-box;">
@@ -52,8 +73,8 @@
     </section>
 
     <section id="pricing">
-        <h2>Pricing</h2>
-        <p>Pay-per-call model for scalable AI integrations.</p>
+        <h2>CIRE API Pricing — Pay Only for What You Use</h2>
+        <p>Transparent, predictable pay-per-call pricing. No setup fees, no monthly commitments.</p>
         <div class="pricing">
             <div class="plan">
                 <h3>Starter</h3>
@@ -75,15 +96,16 @@
     </section>
 
     <section id="register">
-        <h2>Get Free API Key (60 seconds)</h2>
-        <p>Start free now: 100 credits included, no card required.</p>
+        <h2>Get Your Free CIRE API Key — 100 Credits, No Card</h2>
+        <p><strong>Start in 60 seconds:</strong> Get 100 free credits instantly. Perfect for AI shopping agents, beauty compliance pipelines, ingredient safety checkers, and formulation assistants.</p>
         <form id="registerForm">
             <label for="regName">Name</label>
             <input type="text" id="regName" placeholder="your-agent" required>
-            <label for="regEmail">Email</label>
+            <label for="regEmail">Work Email</label>
             <input type="text" id="regEmail" placeholder="you@example.com" required>
-            <button type="submit" style="background:#28a745;">Create Free Key</button>
+            <button type="submit" style="background:#28a745; font-weight:700;">Create Free Key + 100 Credits</button>
         </form>
+        <p style="margin:8px 0 0; font-size:0.9em; color:#666;">We only use your email for API access and product updates. Unsubscribe anytime.</p>
         <div id="registerOutput" style="background:#f8f9fa;border:1px solid #ddd;padding:15px;border-radius:4px;white-space:pre-wrap;min-height:70px;font-family:monospace;margin-top:10px;"></div>
         <div id="firstCallCta" style="display:none; margin-top:12px; border:1px solid #cfe8ff; background:#f4f9ff; padding:12px; border-radius:6px;">
             <strong>Next step (30s): run your first API call</strong>
@@ -97,8 +119,8 @@
     </section>
 
     <section id="integration">
-        <h2>Integrations</h2>
-        <p>Easy to integrate with your favorite AI tools.</p>
+        <h2>CIRE Works With Your AI Stack — LangChain, Claude, MCP</h2>
+        <p>Simple REST API + MCP server. Integrates with your favorite AI agents in minutes.</p>
         
         <h3>LangChain Example</h3>
         <pre><code>from langchain.tools import tool
@@ -145,8 +167,25 @@ const data = await response.json();</code></pre>
         </p>
     </section>
 
+    <section id="resources">
+        <h2>Learn More — Developer Resources & Use Cases</h2>
+        <p>Explore how CIRE works and what you can build with ingredient risk scoring.</p>
+        <ul style="line-height: 1.8;">
+            <li><strong><a href="https://github.com/voix-sys/cire-api/blob/main/docs/DEVELOPER_QUICKSTART.md" target="_blank">Developer Quickstart</a></strong> — Get started in 5 minutes with code examples</li>
+            <li><strong><a href="https://github.com/voix-sys/cire-api/blob/main/docs/blog/2026-03-22-ai-shopping-agent-safety-api.md" target="_blank">AI Shopping Agent Safety API</a></strong> — Ingredient safety checks in e-commerce flows</li>
+            <li><strong><a href="https://github.com/voix-sys/cire-api/blob/main/docs/blog/2026-03-22-kbeauty-compliance-inci-api.md" target="_blank">K-Beauty Compliance INCI API</a></strong> — Regulations & automating risk scoring</li>
+            <li><strong><a href="https://github.com/voix-sys/cire-api/blob/main/docs/blog/2026-03-22-cire-pro-synergy-optimal.md" target="_blank">CIRE Pro: Synergy & Optimal</a></strong> — Advanced formulation intelligence</li>
+        </ul>
+    </section>
+
     <footer>
-        <p>Contact: <a href="mailto:hvoix@voix-sys.com">hvoix@voix-sys.com</a> | <a href="https://mcp.so">MCP.so</a></p>
+        <p style="margin:0 0 8px;">CIRE API — Cosmetic Ingredient Risk Engine</p>
+        <p style="margin:0; font-size:0.9em; color:#999;">
+            <a href="https://github.com/voix-sys/cire-api" style="color:#666;">GitHub</a> | 
+            <a href="mailto:hvoix@voix-sys.com" style="color:#666;">Contact</a> | 
+            <a href="https://mcp.so" style="color:#666;">MCP.so Registry</a>
+        </p>
+        <p style="margin:12px 0 0; font-size:0.85em; color:#999;">© 2026 CIRE. Built for AI agents. K-beauty focused.</p>
     </footer>
 
     <script>
